@@ -1,0 +1,8 @@
+.custom-menu .ant-menu-item-selected {
+  background-color: #d3d3ff !important; /* Change to your desired color */
+  color: #1a73e8 !important; /* Text color for active item */
+}
+
+.custom-menu .ant-menu-item-selected .anticon {
+  color: #1a73e8 !important; /* Icon color for active item */
+}
