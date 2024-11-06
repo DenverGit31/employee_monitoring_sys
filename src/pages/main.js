@@ -36,26 +36,25 @@ const Main = ({ content, modal = "" }) => {
           marginLeft: !collapsed ? 210 : 90,
         }}
       >
-        {screenWidth <= 780 && (
-          <Header
+        <Header
+          style={{
+            padding: 0,
+            background: colorBgContainer,
+            marginLeft: !collapsed ? 10 : 10,
+          }}
+        >
+          <Button
+            type="text"
+            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            onClick={() => setCollapsed(!collapsed)}
             style={{
-              padding: 0,
-              background: colorBgContainer,
-              marginLeft: !collapsed ? 10 : 10,
+              fontSize: "16px",
+              width: 64,
+              height: 64,
             }}
-          >
-            <Button
-              type="text"
-              icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-              onClick={() => setCollapsed(!collapsed)}
-              style={{
-                fontSize: "16px",
-                width: 64,
-                height: 64,
-              }}
-            />
-          </Header>
-        )}
+          />
+        </Header>
+
         <Content
           className="site-layout-background"
           style={{

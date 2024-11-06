@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
+import Dashboard from "./pages/dasboard";
 import SignIn from "./pages/signIn";
 import Departments from "./pages/departments";
 import Setting from "./pages/setting";
@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<SignIn />} />
-        <Route path="/Home" element={<Home />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Departments" element={<Departments />} />
         <Route path="/Settings" element={<Setting />} />
         <Route path="/EmployeeAccounts" element={<EmployeeAccounts />} />

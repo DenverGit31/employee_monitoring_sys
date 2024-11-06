@@ -22,14 +22,12 @@ const SideBar = (props) => {
   const renderNav = (title, path, icon = "") => {
     return (
       <Menu.Item key={path} icon={icon}>
-        <Tooltip title={!props.collapsed && title}>
-          <Link
-            to={path}
-            style={{ color: pathname === path && !props.collapsed && "black" }}
-          >
-            {title}
-          </Link>
-        </Tooltip>
+        <Link
+          to={path}
+          style={{ color: pathname === path && !props.collapsed && "black" }}
+        >
+          {title}
+        </Link>
       </Menu.Item>
     );
     // }
@@ -37,7 +35,7 @@ const SideBar = (props) => {
   const navs = () => {
     return (
       <>
-        {renderNav("Dashboard", "/Home", <BarChartOutlined />)}
+        {renderNav("Dashboard", "/Dashboard", <BarChartOutlined />)}
         {renderNav("Departments", "/Departments", <ApartmentOutlined />)}
         {renderNav(
           "Employee Accounts",
